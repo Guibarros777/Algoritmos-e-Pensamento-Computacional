@@ -214,48 +214,52 @@ int main()
 2) Um posto está vendendo combustíveis com a seguinte tabela de descontos:
 
 Álcool:
-- até 20 litros desconto de 3% por litro
-- acima de 20 litros desconto de 5% por litro
+até 20 litros desconto de 3% por litro
+acima de 20 litros desconto de 5% por litro
 
 Gasolina:
-- até 20 litros desconto de 4% por litro
-- acima de 20 litros desconto de 6% por litro.
+até 20 litros desconto de 4% por litro
+acima de 20 litros desconto de 6% por litro.
 
-Escreva um programa C que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se [...]
+Escreva um programa C que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 6,77 o preço do litro do álcool é R$ 4,34.
+
 
 ```c
 #include <stdio.h>
 
 int main() {
-    float litros, preco, desconto, total;
-    char tipo;
+    float litros, precoCombustivel, desconto, valorTotal;
+    char tipoCombustivel;
 
-    printf("Digite a quantidade de litros: ");
+    printf("Informe o numero de litros vendidos: ");
     scanf("%f", &litros);
+    
+    printf("Informe tipo do combustível A - Alcool ou G - Gasolina..: ");
+    scanf(" %c", &tipoCombustivel);
 
-    printf("Digite o tipo de combustivel (A/G): ");
-    scanf(" %c", &tipo);
-
-    if (tipo == 'A' || tipo == 'a') {
-        if (litros <= 20)
-            desconto = 0.03;
-        else
-            desconto = 0.05;
-        preco = 1.90;
-    } else {
-        if (litros <= 20)
-            desconto = 0.04;
-        else
+    if (tipoCombustivel=='G' || tipoCombustivel=='g'){
+        precoCombustivel = 6.77;
+        if (litros > 20)
             desconto = 0.06;
-        preco = 2.50;
+        else 
+            desconto = 0.04;
+    } else if (tipoCombustivel=='A' || tipoCombustivel=='a'){
+        precoCombustivel = 4.34;
+        if (litros > 20)
+            desconto = 0.05;
+        else 
+            desconto = 0.03;
+    } else {
+        printf("Tipo de combustível inválido!!!");
+        return 1;
     }
 
-    total = litros * preco * (1 - desconto);
-
-    printf("\nValor total a pagar: R$ %.2f\n", total);
+    valorTotal = (litros * precoCombustivel) * (1 - desconto);
+    printf("Valor a ser pago: R$ %.2f\n", valorTotal);
 
     return 0;
 }
+     
 ```
 
 3) Faça um programa que leia uma quantidade de segundos e converta esse valor para:
