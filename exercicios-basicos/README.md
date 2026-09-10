@@ -10,9 +10,204 @@ Nesta pasta você encontrará exercícios fundamentais de algorítmos e pensamen
 
 ## Conteúdo
 
+### CÓDIGOS EM SALA
+``` 
+CÓDIGOS EM SALA
+Declare
+       nota1,  nota2, nota3, media
+início
+      escreva “Informe a nota 1”
+      leia nota1
+      escreva “Informe nota 2”
+      leia nota2
+      escreva ”Informe nota3”
+      leia nota 3
+
+      media = (nota1 + nota2 + nota3)/3
+se ( media>=6) 
+      então escreva “Aprovado”
+      então escreva “Reprovado”
+      escreva “A média é”, media
+fim
+
+COMPILADO EM C:
+int main() {
+    float n1, n2, n3, media;
+
+
+    printf("Nota 1: ");
+    scanf("%f", &n1);
+
+
+    printf("Nota 2: ");
+    scanf("%f", &n2);
+
+
+    printf("Nota 3: ");
+    scanf("%f", &n3);
+
+
+    media = (n1 + n2 + n3) / 3;
+    if(media >= 6) {
+        printf("Aprovado\n");
+        }else{("Reprovado\n");}
+    printf("Media: %.1f\n", media);
+
+
+    return 0;
+}
+
+Calculadora Simples
+int main() {
+    float num1, num2, resultado;
+    char operador;
+    
+    printf("Digite o primeiro número: ");
+    scanf("%f", &num1);
+    
+    printf("Digite o operador (+, -, *, /): ");
+    scanf(" %c", &operador);
+    
+    printf("Digite o segundo número: ");
+    scanf("%f", &num2);
+    
+    switch(operador) {
+        case '+':
+            resultado = num1 + num2;
+            break;
+        case '-':
+            resultado = num1 - num2;
+            break;
+        case '*':
+            resultado = num1 * num2;
+            break;
+        case '/':
+            if (num2 != 0) {
+                resultado = num1 / num2;
+            } else {
+                printf("Erro: Divisão por zero!\n");
+                return 1;
+            }
+            break;
+        default:
+            printf("Operador inválido!\n");
+            return 1;
+    }
+    
+    printf("%.2f %c %.2f = %.2f\n", num1, operador, num2, resultado);
+    return 0;
+}
+Conversor de Temperatura
+
+#include <stdio.h>
+
+int main() {
+    float temperatura, convertida;
+    char escala;
+    
+    printf("Digite a temperatura: ");
+    scanf("%f", &temperatura);
+    
+    printf("Digite a escala (C para Celsius, F para Fahrenheit): ");
+    scanf(" %c", &escala);
+    
+    if (escala == 'C' || escala == 'c') {
+        convertida = (temperatura * 9.0 / 5.0) + 32.0;
+        printf("%.2f°C = %.2f°F\n", temperatura, convertida);
+    } else if (escala == 'F' || escala == 'f') {
+        convertida = (temperatura - 32.0) * 5.0 / 9.0;
+        printf("%.2f°F = %.2f°C\n", temperatura, convertida);
+    } else {
+        printf("Escala inválida!\n");
+        return 1;
+    }
+    
+    return 0;
+}
+—------------------------------------------------------------------------------------------------------------------------
+ATIVIDADE 
+
+1:PROGRAMA “QUAL NÚMERO É MAIOR?
+#include <stdio.h>
+int main() {
+    float n1, n2, n3;
+
+
+    printf("Digite o primeiro número: ");
+    scanf("%f", &n1);
+
+
+    printf("Digite o segundo número: ");
+    scanf("%f", &n2);
+
+
+    printf("Digite o terceiro número: ");
+    scanf("%f", &n3);
+
+
+    if (n1 >= n2 && n1 >= n3) {
+        printf("O maior número é: %.2f\n", n1);} 
+        else if (n2 >= n1 && n2 >= n3) {
+        printf("O maior número é: %.2f\n", n2);} 
+        else
+        { printf("O maior número é: %.2f\n", n3);} 
+    return 0;}
+
+
+2:EMPRÉSTIMO
+#include <stdio.h>
+int main() {
+    float salario, prestacao;
+
+    printf("Digite o valor do salário: ");
+    scanf("%f", &salario);
+
+    printf("Digite o valor da prestação: ");
+    scanf("%f", &prestacao);
+
+    if (prestacao > salario * 0.20) {
+        printf("Empréstimo não concedido.\n");
+    } else {
+        printf("Empréstimo concedido.\n");
+    }
+    return 0;}
+
+
+3:PESO IDEAL
+
+#include <stdio.h>
+
+int main() {
+    float altura, peso_ideal;
+    char sexo;
+
+    printf("Digite a altura (em metros, ex: 1.75): ");
+    scanf("%f", &altura);
+
+    printf("Digite o sexo (M para Masculino, F para Feminino): ");
+    scanf(" %c", &sexo);
+
+    if (sexo == 'M' || sexo == 'm') {
+        peso_ideal = (72.7 * altura) - 58;
+        printf("O peso ideal para um homem de %.2fm e: %.2f kg\n", altura, peso_ideal);
+    } 
+    else if (sexo == 'F' || sexo == 'f') {
+        peso_ideal = (62.1 * altura) - 44.7;
+        printf("O peso ideal para uma mulher de %.2fm e: %.2f kg\n", altura, peso_ideal);
+    } 
+    else {
+        printf("Opcao de sexo invalida! Use apenas 'M' ou 'F'.\n");
+    }
+
+    return 0;
+}
+
+
+``` 
+
 ### Lista de Exercícios II - Fundamentos da Linguagem C
 
-1) O valor pago por um Hotel da Praia de Iracema para seus porteiros é de R$ 10,25 por hora de trabalho. Faça um programa que pergunte ao usuário quantas horas ele trabalhou e imprima na tela o valor do salário a ser recebido por ele.
+1) O valor pago por um Hotel da Praia de Iracema para seus porteiros é de R$ 10,25 por hora de trabalho. Faça um programa que pergunte ao usuário quantas horas ele trabalhou e imprima na tela o[...]
 
 ```c
 #include <stdio.h>
@@ -27,7 +222,7 @@ int main()
 }
 ```
 
-2) Sabendo que na Faculdade ABC a média mínima é 7,0 e a tolerância de faltas é 15 % da carga horária do curso, faça um programação em C que peça as informações necessárias e informe a situação do usuário.
+2) Sabendo que na Faculdade ABC a média mínima é 7,0 e a tolerância de faltas é 15 % da carga horária do curso, faça um programação em C que peça as informações necessárias e informe [...]
 
 ```c
 #include <stdio.h>
@@ -83,16 +278,19 @@ int main()
     printf(" Cadastro do Funcionário \n");
    
     printf("Nome: ");
-    scanf(" %[^\n]", nome);
+    scanf(" %[^
+", nome);
 
     printf("Endereço: ");
-    scanf(" %[^\n]", endereco);
+    scanf(" %[^
+", endereco);
 
     printf("Sexo (M/F/Outro): ");
     scanf(" %c", &sexo);
 
     printf("Cidade: ");
-    scanf(" %[^\n]", cidade);
+    scanf(" %[^
+", cidade);
 
     printf("Estado (UF ex: SP, RJ): ");
     scanf(" %2s", estado);
@@ -150,15 +348,19 @@ int main()
 
     printf(" Sistema calculo de Salário \n");
     printf("Nome: ");
-    scanf(" %[^\n]", nome);
+    scanf(" %[^
+", nome);
     printf("Endereço: ");
-    scanf(" %[^\n]", endereco);
+    scanf(" %[^
+", endereco);
     printf("Sexo ");
     scanf(" %c", &sexo);
     printf("Cidade ");
-    scanf(" %[^\n]", cidade);
+    scanf(" %[^
+", cidade);
     printf("Estado ");
-    scanf(" %[^\n]", estado);
+    scanf(" %[^
+", estado);
     printf("Idade ");
     scanf("%d", &idade);
     printf("Salário Bruto (R$): ");
@@ -221,7 +423,7 @@ Gasolina:
 até 20 litros desconto de 4% por litro
 acima de 20 litros desconto de 6% por litro.
 
-Escreva um programa C que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 6,77 o preço do litro do álcool é R$ 4,34.
+Escreva um programa C que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabend[...]
 
 
 ```c
