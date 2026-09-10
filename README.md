@@ -1,6 +1,6 @@
 # 🧠 Algoritmos e Pensamento Computacional
 
-Bem-vindo ao meu repositório de estudos! Aqui centralizo os códigos, exercícios e projetos desenvolvidos para praticar a lógica de programação e a resolução estruturada de problemas.
+Bem-vindo ao meu repositório de estudos! Aqui centralizo os códigos, exercícios e projetos desenvolvidos para praticar a lógica de programação e a resolução estrutururada de problemas.
 
 ## 🚀 O que você vai encontrar aqui
 * **Lógica de Programação:** Scripts em Python aplicando estruturas condicionais, de repetição e manipulação de dados.
@@ -8,9 +8,9 @@ Bem-vindo ao meu repositório de estudos! Aqui centralizo os códigos, exercíci
 * **Fundamentos:** Códigos comentados para facilitar o entendimento da base da computação.
 
 ## 📂 Estrutura de Pastas
-* **`/exercicios-basicos`** - Primeiros scripts e lógica sequencial
-* **`/estruturas-controle`** - Códigos envolvendo condicionais (`if/else`) e loops (`for/while`)
-* **`/projetos`** - Mini-aplicações e desafios práticos
+* **[`exercicios-basicos`](https://github.com/Guibarros777/Algoritmos-e-Pensamento-Computacional/tree/main/exercicios-basicos)** - Primeiros scripts e lógica sequencial
+* **[`estruturas-controle`](https://github.com/Guibarros777/Algoritmos-e-Pensamento-Computacional/tree/main/estruturas-controle)** - Códigos envolvendo condicionais (`if/else`) e loops (`for/while`)
+* **[`projetos`](https://github.com/Guibarros777/Algoritmos-e-Pensamento-Computacional/tree/main/projetos)** - Mini-aplicações e desafios práticos
 
 ---
 
