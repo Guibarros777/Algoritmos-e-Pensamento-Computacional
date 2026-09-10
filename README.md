@@ -8,9 +8,10 @@ Bem-vindo ao meu repositório de estudos! Aqui centralizo os códigos, exercíci
 * **Fundamentos:** Códigos comentados para facilitar o entendimento da base da computação.
 
 ## 📂 Estrutura de Pastas
-* `/exercicios-basicos`: Primeiros scripts e lógica sequencial.
-* `/estruturas-controle`: Códigos envolvendo condicionais (`if/else`) e loops (`for/while`).
-* `/projetos`: Mini-aplicações e desafios práticos.
+* **`/exercicios-basicos`** - Primeiros scripts e lógica sequencial
+* **`/estruturas-controle`** - Códigos envolvendo condicionais (`if/else`) e loops (`for/while`)
+* **`/projetos`** - Mini-aplicações e desafios práticos
 
 ---
+
 *Estudante de Engenharia de Software focando em construir uma base sólida em programação e arquitetura de sistemas.*
